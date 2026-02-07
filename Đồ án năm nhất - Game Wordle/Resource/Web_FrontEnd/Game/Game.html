@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Game | Nguyen Thanh Cong</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'Game/Game_style.css') }}">
+</head>
+<body>
+    <div id="instruction">
+        <ul>
+            <li class="instruct">Xin chào, {{ username }}!</li>
+        </ul>
+    </div>
+    <div id="container">
+        <header>
+            <h1>Wordle</h1>
+            <button id="openclosekeyboard"  type="button">Ẩn/ Hiện keyboard</button>
+            <button id="resumeGame" type="button">Resume</button>
+            <button id="outgame" type="button">Thoát</button>
+        </header>
+        
+        <main>
+            <section id="board"></section>
+        </main>
+        <footer id = "container-footer">
+            <section id="keyboard">
+            </section>
+        </footer>
+    </div>
+    <script src="{{ url_for('static', filename = 'Game/Game_script.js') }}"></script>
+</body>
+</html>
