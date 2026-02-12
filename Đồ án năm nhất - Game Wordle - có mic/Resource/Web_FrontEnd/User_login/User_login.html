@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'User_login/User_login_style.css') }}">
+    <title>Wordle Game | Nguyen Thanh Cong</title>
+</head>
+<body>
+    
+    <div id="wordle-container">
+        <form id="game-setup" action="/" method="POST">
+            <div>
+                <label for="username">Tên đăng nhập:</label>
+                <input id="username" type="text" name = "username" required placeholder="Nhập tên">
+            </div>
+            <div>
+                <label for="password">Mật khẩu:</label>
+                <input id="password" type="password" name = "password" required placeholder="Nhập mật khẩu">
+            </div>
+            <div>
+                <label for="difficulty">Độ khó:</label>
+                <select id="difficulty" name = "difficulty">
+                    <option value="random">Ngẫu nhiên</option>
+                    <option value="easy">Dễ</option>
+                    <option value="medium">Trung bình</option>
+                    <option value="hard">Khó</option>
+                </select>
+            </div>
+            <div>
+                <label for="type">Chế độ:</label>
+                <select name="type" id="type">
+                    <option value="english">Tiếng Anh</option>
+                    <option value="vietnamese">Tiếng Việt</option>
+                </select>
+            </div>
+            <button id="start-btn" type="submit">Bắt đầu</button>
+        </form>
+    </div>
+
+    <div id="other-container">
+        <a id = "instruction" href="{{ url_for('Instruction_display.Instruction')}}">Hướng dẫn</a>
+        <a href="{{ url_for('Score_board_display.Board')}}">Bảng điểm</a>
+        <a href="{{ url_for('AI_display.AI_start_playing')}}">AI chơi</a>
+    </div>
+    <script src="{{ url_for('static', filename = 'User_login/User_login_script.js') }}"></script>
+</body>
+</html>

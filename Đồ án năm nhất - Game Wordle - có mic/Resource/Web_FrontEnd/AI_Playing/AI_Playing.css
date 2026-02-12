@@ -1,0 +1,121 @@
+html {
+    box-sizing: border-box;
+    height: 100%;
+}
+
+*, *:before, *:after{
+    box-sizing: inherit;
+}
+
+body{
+    color: rgb(0,0,0);
+    font-family: Arial,sans-serif;
+    margin: 0.5%;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+body {
+  background-image: url("../hinh-nen.jpg");
+  background-size: cover; 
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#instruction ul{
+    margin-left: 0;
+    padding-left: 0;
+    display:flex;
+    flex-direction: column;
+}
+
+#instruction li{
+    width: 400px;
+    padding: 4px;
+    margin: 4px;
+    padding-left: 0;
+    margin-left: 0;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+#container{
+    width: 420px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    margin: 20px;
+}
+
+header {
+    border-bottom: 1px solid gray;
+    background-color: transparent;
+}
+
+header h1{
+    margin: 10px 0; 
+    padding: 0;
+    text-align: center;
+    background-color: transparent;
+}  
+
+main{
+    margin-top: 20px;
+    flex-grow: 1;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* vùng #board trong video còn có thêm #keyboard */
+#board{ 
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-transform: uppercase;
+    align-items: center;
+}
+
+/* vùng #board ul trong video còn có thêm #keyboard ul */
+#board ul{
+    display: flex; 
+    list-style: none;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+}
+
+[data-status]{
+  border: 2px solid rgb(64, 64, 64);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 2rem;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  height: 4rem;
+  width: 4rem;
+
+  user-select: none;
+}
+
+[data-status = 'valid'] {
+    background: green;
+}
+[data-status = 'invalid'] {
+    background: yellow;
+}
+[data-status = 'none'] {
+    background: rgb(85, 85, 85);
+}
